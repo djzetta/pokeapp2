@@ -68,8 +68,6 @@ class PokemonFragment : Fragment(R.layout.fragment_pokemon), PokemonAdapter.OnPo
 
         //fun reproduceSoundPool(view:View){
           //  sp?.play(soundOne,1f,1f,1,1f)}
-
-
     }
 
     override fun onPokemonClick(pokemon: Result) {
