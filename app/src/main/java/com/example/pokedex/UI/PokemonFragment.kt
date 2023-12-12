@@ -1,5 +1,7 @@
 package com.example.pokedex.UI
 
+import android.media.AudioManager
+import android.media.SoundPool
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -56,6 +58,16 @@ class PokemonFragment : Fragment(R.layout.fragment_pokemon), PokemonAdapter.OnPo
                 }
             }
         })
+
+        //var sp = SoundPool?=null
+        //var soundOne=0
+        //sp = SoundPool(1, AudioManager.STREAM_MUSIC,1)
+
+        //soundOne=sp.load(this,R.raw.pokeplus, 1)!!
+
+
+        //fun reproduceSoundPool(view:View){
+          //  sp?.play(soundOne,1f,1f,1,1f)}
     }
 
     override fun onPokemonClick(pokemon: Result) {
@@ -63,5 +75,4 @@ class PokemonFragment : Fragment(R.layout.fragment_pokemon), PokemonAdapter.OnPo
         val action= PokemonFragmentDirections.actionPokemonFragmentToPokemonDetailsFragment(pokemon.name)
         findNavController().navigate(action)
     }
-
 }
